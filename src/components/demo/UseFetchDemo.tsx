@@ -1,3 +1,4 @@
+import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useFetch } from "@zeilar/hooks";
 import React, { useState } from "react";
@@ -30,10 +31,12 @@ function UseFetchDemo() {
 				}}
 				sx={{ mb: 2 }}
 			/>
-			{isLoading && <p>Loading... ⌛</p>}
-			{isSuccess && <p>Success ✅</p>}
-			{isError && <p>Error ❌</p>}
-			{isSuccess && <p>{JSON.stringify(data, null, 4)}</p>}
+			{isLoading && <div>Loading... ⌛</div>}
+			{isSuccess && <div>Success ✅</div>}
+			{isError && <div>Error ❌</div>}
+			{isSuccess && (
+				<Box marginTop={2}>{JSON.stringify(data, null, 4)}</Box>
+			)}
 		</pre>
 	);
 }
