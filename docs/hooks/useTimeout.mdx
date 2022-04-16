@@ -6,7 +6,6 @@ import UseTimeoutDemo from "@site/src/components/demo/UseTimeoutDemo";
 import Button from "@mui/material/Button";
 import { useOnMount, useOnUnmount, useTimeout } from "@zeilar/hooks";
 import React, { useEffect, useRef, useState } from "react";
-import { withBrowserOnly } from "../withBrowserOnly";
 
 const TIMER = 2000;
 
@@ -16,30 +15,30 @@ function UseTimeoutDemo() {
 		setDone(true);
 	}, TIMER);
 	const [countdown, setCountdown] = useState(TIMER);
-	const countdownRef = useRef<number>();
+	const countdownIntervalRef = useRef<number>();
 
 	function clearCountdown() {
 		clear();
-		clearTimeout(countdownRef.current);
+		clearInterval(countdownIntervalRef.current);
 		setDone(true);
 		setCountdown(0);
 	}
 
 	useOnMount(() => {
-		const timeout = window.setInterval(() => {
+		const interval = window.setInterval(() => {
 			setCountdown(countdown => countdown - 1000);
 		}, 1000);
-		countdownRef.current = timeout;
+		countdownIntervalRef.current = interval;
 	});
 
 	useEffect(() => {
 		if (countdown <= 0) {
-			clearTimeout(countdownRef.current);
+			clearInterval(countdownIntervalRef.current);
 		}
 	}, [countdown]);
 
 	useOnUnmount(() => {
-		clearTimeout(countdownRef.current);
+		clearInterval(countdownIntervalRef.current);
 	});
 
 	return (

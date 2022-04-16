@@ -12,30 +12,30 @@ function UseTimeoutDemo() {
 		setDone(true);
 	}, TIMER);
 	const [countdown, setCountdown] = useState(TIMER);
-	const countdownRef = useRef<number>();
+	const countdownIntervalRef = useRef<number>();
 
 	function clearCountdown() {
 		clear();
-		clearTimeout(countdownRef.current);
+		clearInterval(countdownIntervalRef.current);
 		setDone(true);
 		setCountdown(0);
 	}
 
 	useOnMount(() => {
-		const timeout = window.setInterval(() => {
+		const interval = window.setInterval(() => {
 			setCountdown(countdown => countdown - 1000);
 		}, 1000);
-		countdownRef.current = timeout;
+		countdownIntervalRef.current = interval;
 	});
 
 	useEffect(() => {
 		if (countdown <= 0) {
-			clearTimeout(countdownRef.current);
+			clearInterval(countdownIntervalRef.current);
 		}
 	}, [countdown]);
 
 	useOnUnmount(() => {
-		clearTimeout(countdownRef.current);
+		clearInterval(countdownIntervalRef.current);
 	});
 
 	return (
