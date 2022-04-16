@@ -1,0 +1,39 @@
+import UseDisclosureDemo from "@site/src/components/demo/UseDisclosureDemo";
+
+Controlled accordion
+
+<UseDisclosureDemo />
+
+```tsx
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Accordion from "@mui/material/Accordion";
+import { useDisclosure } from "@zeilar/hooks";
+import React from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+function UseDisclosureDemo() {
+	const { close, isOpen, open, toggle } = useDisclosure();
+
+	function onChangeHandler(
+		_e: React.SyntheticEvent<Element, Event>,
+		expanded: boolean
+	) {
+		expanded ? open() : close();
+	}
+
+	return (
+		<pre>
+			<Button sx={{ mb: 2 }} onClick={toggle}>
+				Toggle
+			</Button>
+			<Accordion expanded={isOpen} onChange={onChangeHandler}>
+				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
+					Click me
+				</AccordionSummary>
+				<AccordionDetails>Hello👋</AccordionDetails>
+			</Accordion>
+		</pre>
+	);
+}
+```

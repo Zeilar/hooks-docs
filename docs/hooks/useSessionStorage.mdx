@@ -1,0 +1,34 @@
+import UseSessionStorageDemo from "@site/src/components/demo/UseSessionStorageDemo";
+
+You can find this value in `DevTools -> Application -> Storage (Session Storage) -> https://hooks.angelin.dev -> useSessionStorage`
+
+The input value will be persist until removed.
+
+<UseSessionStorageDemo />
+
+```tsx
+import TextField from "@mui/material/TextField";
+import { useSessionStorage } from "@zeilar/hooks";
+import React from "react";
+
+function UseSessionStorageDemo() {
+	const [data, setData] = useSessionStorage<string>(
+		"useSessionStorage",
+		"Hello world"
+	);
+	return (
+		<pre>
+			<TextField
+				size="small"
+				label="Value"
+				value={data}
+				onChange={e => setData(e.target.value)}
+				variant="outlined"
+				name="value"
+				required
+				autoFocus
+			/>
+		</pre>
+	);
+}
+```
