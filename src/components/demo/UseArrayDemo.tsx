@@ -3,6 +3,7 @@ import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import { withBrowserOnly } from "../withBrowserOnly";
 
 function getRandomNumber() {
 	return Math.floor(Math.random() * 10);
@@ -37,4 +38,4 @@ function UseArrayDemo() {
 	);
 }
 
-export default withThemeProvider(UseArrayDemo);
+export default withThemeProvider(withBrowserOnly(UseArrayDemo));
