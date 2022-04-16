@@ -20,7 +20,6 @@ function UseFetchDemo() {
 			<TextField
 				value={id}
 				label="ID"
-				variant="outlined"
 				onChange={e => setId(parseInt(e.target.value) || 0)}
 				type="number"
 				name="id"

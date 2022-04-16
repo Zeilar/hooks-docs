@@ -38,7 +38,6 @@ function UseHistoryStateDemo() {
 				onSubmit={onSubmit}
 			>
 				<TextField
-					size="small"
 					label="String"
 					name="string"
 					value={input}

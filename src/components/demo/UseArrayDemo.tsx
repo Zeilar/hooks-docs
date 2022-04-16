@@ -1,8 +1,8 @@
 import { useArray } from "@zeilar/hooks";
-import React, { useMemo, useState } from "react";
+import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Button from "@mui/material/Button";
-import { ButtonGroup } from "@mui/material";
+import ButtonGroup from "@mui/material/ButtonGroup";
 
 function getRandomNumber() {
 	return Math.floor(Math.random() * 10);

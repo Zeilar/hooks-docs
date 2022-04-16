@@ -12,13 +12,10 @@ function UseSessionStorageDemo() {
 	return (
 		<pre>
 			<TextField
-				size="small"
 				label="Value"
 				value={data}
 				onChange={e => setData(e.target.value)}
-				variant="outlined"
 				name="value"
-				required
 				autoFocus
 			/>
 		</pre>

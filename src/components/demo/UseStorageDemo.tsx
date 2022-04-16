@@ -18,22 +18,18 @@ function UseStorageDemo() {
 	return (
 		<pre>
 			<TextField
-				size="small"
 				label="useLocalStorage"
 				value={localData}
 				onChange={e => setLocalData(e.target.value)}
-				variant="outlined"
 				name="value"
 				autoFocus
 			/>
 			<TextField
 				sx={{ ml: 1 }}
-				size="small"
 				label="useSessionStorage"
 				value={sessionData}
 				onChange={e => setSessionData(e.target.value)}
 				name="value"
-				variant="outlined"
 			/>
 		</pre>
 	);
