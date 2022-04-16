@@ -20,7 +20,7 @@ function UseArrayDemo() {
 
 	return (
 		<pre>
-			<p>{JSON.stringify(array.state)}</p>
+			<p>{JSON.stringify(array.state).replaceAll(",", ", ")}</p>
 			<ButtonGroup>
 				<Button onClick={pushRandom}>Push</Button>
 				<Button onClick={unshiftRandom}>Unshift</Button>
