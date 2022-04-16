@@ -23,7 +23,7 @@ const config = {
 					breadcrumbs: false,
 					routeBasePath: "/",
 					sidebarPath: require.resolve("./sidebars.js"),
-					editUrl: "https://github.com/Zeilar/hooks",
+					editUrl: "https://github.com/Zeilar/hooks-docs/tree/main",
 				},
 				blog: false,
 				theme: {
