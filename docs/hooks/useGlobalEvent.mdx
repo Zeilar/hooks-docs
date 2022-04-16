@@ -1,0 +1,16 @@
+import UseGlobalEventDemo from "@site/src/components/demo/UseGlobalEventDemo";
+
+Press any key
+
+<UseGlobalEventDemo />
+
+```tsx
+import { useGlobalEvent } from "@zeilar/hooks";
+import React, { useState } from "react";
+
+function UseGlobalEvent() {
+	const [key, setKey] = useState<string>();
+	useGlobalEvent("keydown", e => setKey(e.key));
+	return <pre>{key ?? "No key pressed."}</pre>;
+}
+```

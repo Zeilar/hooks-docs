@@ -1,0 +1,17 @@
+import UseIsMountedDemo from "@site/src/components/demo/UseIsMountedDemo";
+
+Is component mounted?
+
+_The process is slower due to Docusaurus._
+
+<UseIsMountedDemo />
+
+```tsx
+import { useIsMounted } from "@zeilar/hooks";
+import React from "react";
+
+function UseIsMountedDemo() {
+	const isMounted = useIsMounted();
+	return <pre>{String(isMounted())}</pre>;
+}
+```

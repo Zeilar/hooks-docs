@@ -1,0 +1,46 @@
+import UseStorageDemo from "@site/src/components/demo/UseStorageDemo";
+
+Stub for [useLocalStorage](/hooks/useLocalStorage) and [useSessionStorage](/hooks/useSessionStorage), which should be used instead.
+
+You can find this value in `DevTools -> Application -> Storage (Local/Session Storage) -> https://hooks.angelin.dev -> useStorage-{storage type}`
+
+<UseStorageDemo />
+
+```tsx
+import TextField from "@mui/material/TextField";
+import { useStorage } from "@zeilar/hooks";
+import React from "react";
+
+function UseStorageDemo() {
+	const [localData, setLocalData] = useStorage<string>(
+		localStorage,
+		"useLocalStorage",
+		"Hello world"
+	);
+	const [sessionData, setSessionData] = useStorage<string>(
+		sessionStorage,
+		"useSessionStorage",
+		"Hello world"
+	);
+	return (
+		<pre>
+			<TextField
+				size="small"
+				label="useLocalStorage"
+				value={localData}
+				onChange={e => setLocalData(e.target.value)}
+				variant="outlined"
+				autoFocus
+			/>
+			<TextField
+				sx={{ ml: 1 }}
+				size="small"
+				label="useSessionStorage"
+				value={sessionData}
+				onChange={e => setSessionData(e.target.value)}
+				variant="outlined"
+			/>
+		</pre>
+	);
+}
+```

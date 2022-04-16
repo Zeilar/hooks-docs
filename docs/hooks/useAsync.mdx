@@ -1,0 +1,46 @@
+_If you are planning to use this with fetch, you may want to check out [useFetch](/hooks/useFetch)_.
+
+import UseAsyncDemo from "@site/src/components/demo/UseAsyncDemo";
+
+<UseAsyncDemo />
+
+```tsx
+import { useAsync } from "@zeilar/hooks";
+import React, { useMemo, useState } from "react";
+import Button from "@mui/material/Button";
+
+interface Result {
+	message: string;
+}
+
+function UseAsyncDemo() {
+	const [index, setIndex] = useState(0);
+
+	// Memoize to avoid infinite rerenders.
+	// In some cases you could also put it outside the component.
+	const memoizedPromise = useMemo(
+		() =>
+			new Promise<Result>((resolve, reject) => {
+				// 50/50 chance of succeeding or failing, for the sake of the demo
+				setTimeout(() => {
+					Math.random() < 0.5
+						? resolve({ message: "Hello world 👋" })
+						: reject(new Error("Whoops 💥"));
+				}, 1000);
+			}),
+		[index]
+	);
+
+	// useAsync(async() => { /* ... */ }); Don't do this!
+	const { error, loading, result } = useAsync<Result, Error>(memoizedPromise);
+
+	return (
+		<pre>
+			{loading && <p>Loading... ⌛</p>}
+			{error && <p>{error.message}</p>}
+			{result && <p>{result.message}</p>}
+			<Button onClick={() => setIndex(p => p + 1)}>Reload</Button>
+		</pre>
+	);
+}
+```
