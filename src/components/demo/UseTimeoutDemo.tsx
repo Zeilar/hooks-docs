@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { useOnMount, useTimeout } from "@zeilar/hooks";
+import { useOnMount, useOnUnmount, useTimeout } from "@zeilar/hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";
@@ -33,6 +33,10 @@ function UseTimeoutDemo() {
 			clearTimeout(countdownRef.current);
 		}
 	}, [countdown]);
+
+	useOnUnmount(() => {
+		clearTimeout(countdownRef.current);
+	});
 
 	return (
 		<pre>
