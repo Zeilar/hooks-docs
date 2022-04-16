@@ -23,6 +23,11 @@ function UseFetchDemo() {
 				onChange={e => setId(parseInt(e.target.value) || 0)}
 				type="number"
 				name="id"
+				InputProps={{
+					inputProps: {
+						min: 0,
+					},
+				}}
 				sx={{ mb: 2 }}
 			/>
 			{isLoading && <p>Loading... ⌛</p>}
