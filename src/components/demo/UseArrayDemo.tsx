@@ -10,7 +10,7 @@ function getRandomNumber() {
 }
 
 function UseArrayDemo() {
-	const array = useArray<number>();
+	const array = useArray<number>([1, 2, 3, 4, 5]);
 
 	const pushRandom = () => array.push(getRandomNumber());
 	const unshiftRandom = () => array.unshift(getRandomNumber());
@@ -33,6 +33,7 @@ function UseArrayDemo() {
 				<Button onClick={sortLowestToHighest}>Sort</Button>
 				<Button onClick={removeFirst}>Remove</Button>
 				<Button onClick={array.empty}>Empty</Button>
+				<Button onClick={array.reset}>Reset</Button>
 			</ButtonGroup>
 		</pre>
 	);
