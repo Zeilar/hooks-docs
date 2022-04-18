@@ -7,10 +7,10 @@ import { useWindowSize } from "@zeilar/hooks";
 import React from "react";
 
 function UseWindowSizeDemo() {
-	const windowSize = useWindowSize();
+	const { width, height } = useWindowSize();
 	return (
 		<pre>
-			Window size: {windowSize.x}x{windowSize.y}
+			Window size: {width}x{height}
 		</pre>
 	);
 }

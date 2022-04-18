@@ -4,10 +4,10 @@ import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";
 
 function UseWindowSizeDemo() {
-	const windowSize = useWindowSize();
+	const { width, height } = useWindowSize();
 	return (
 		<pre>
-			Window size: {windowSize.x}x{windowSize.y}
+			Window size: {width}x{height}
 		</pre>
 	);
 }
