@@ -5,7 +5,7 @@ import React from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";
 
-function UseWindowSizeDemo() {
+function UseBodyScrollDemo() {
 	const [hasScroll, setHasScroll] = useBodyScroll();
 	return (
 		<pre>
@@ -19,4 +19,4 @@ function UseWindowSizeDemo() {
 	);
 }
 
-export default withThemeProvider(withBrowserOnly(UseWindowSizeDemo));
+export default withThemeProvider(withBrowserOnly(UseBodyScrollDemo));
