@@ -5,7 +5,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: "@zeilar/hooks",
+	title: "use-ful-hooks-ts",
 	tagline: "React hooks collection",
 	url: "https://hooks.angelin.dev",
 	baseUrl: "/",
@@ -41,7 +41,7 @@ const config = {
 				disableSwitch: true,
 			},
 			navbar: {
-				title: "@zeilar/hooks",
+				title: "use-ful-hooks-ts",
 				items: [
 					{
 						href: "https://github.com/Zeilar/hooks",
@@ -52,7 +52,7 @@ const config = {
 			},
 			footer: {
 				style: "dark",
-				copyright: `Copyright © ${new Date().getFullYear()} @zeilar/hooks, Inc. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} use-ful-hooks-ts, Inc. Built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

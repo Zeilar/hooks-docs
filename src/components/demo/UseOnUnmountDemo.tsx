@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { useOnUnmount, useDisclosure } from "@zeilar/hooks";
+import { useOnUnmount, useDisclosure } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

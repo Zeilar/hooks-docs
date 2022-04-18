@@ -1,4 +1,4 @@
-import { useAsync, useOnUnmount } from "@zeilar/hooks";
+import { useAsync, useOnUnmount } from "use-ful-hooks-ts";
 import React, { useMemo, useRef, useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Button from "@mui/material/Button";

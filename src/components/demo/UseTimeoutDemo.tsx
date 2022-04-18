@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { useOnMount, useOnUnmount, useTimeout } from "@zeilar/hooks";
+import { useOnMount, useOnUnmount, useTimeout } from "use-ful-hooks-ts";
 import React, { useEffect, useRef, useState } from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";

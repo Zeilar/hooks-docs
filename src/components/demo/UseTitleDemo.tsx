@@ -1,5 +1,5 @@
 import TextField from "@mui/material/TextField";
-import { useTitle } from "@zeilar/hooks";
+import { useTitle } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";

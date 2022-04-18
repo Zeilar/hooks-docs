@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { useFetch } from "@zeilar/hooks";
+import { useFetch } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

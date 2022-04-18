@@ -1,4 +1,4 @@
-import { useObject, AnyObject } from "@zeilar/hooks";
+import { useObject, AnyObject } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Button from "@mui/material/Button";

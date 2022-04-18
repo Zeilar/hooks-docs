@@ -1,5 +1,5 @@
 import Switch from "@mui/material/Switch";
-import { useTheme } from "@zeilar/hooks";
+import { useTheme } from "use-ful-hooks-ts";
 import React, { useEffect } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import { withBrowserOnly } from "../withBrowserOnly";

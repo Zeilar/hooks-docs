@@ -1,4 +1,4 @@
-import { useIsOnline } from "@zeilar/hooks";
+import { useIsOnline } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

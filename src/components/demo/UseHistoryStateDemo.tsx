@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import { useHistoryState } from "@zeilar/hooks";
+import { useHistoryState } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Typography from "@mui/material/Typography";

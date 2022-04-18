@@ -1,4 +1,4 @@
-import { useIsMounted } from "@zeilar/hooks";
+import { useIsMounted } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

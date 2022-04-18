@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import { useEventListener } from "@zeilar/hooks";
+import { useEventListener } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

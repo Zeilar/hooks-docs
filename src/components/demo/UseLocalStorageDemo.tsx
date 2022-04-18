@@ -1,5 +1,5 @@
 import TextField from "@mui/material/TextField";
-import { useLocalStorage } from "@zeilar/hooks";
+import { useLocalStorage } from "use-ful-hooks-ts";
 import React from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";

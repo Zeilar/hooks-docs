@@ -1,7 +1,7 @@
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Accordion from "@mui/material/Accordion";
-import { useDisclosure } from "@zeilar/hooks";
+import { useDisclosure } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

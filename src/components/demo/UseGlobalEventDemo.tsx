@@ -1,4 +1,4 @@
-import { useGlobalEvent } from "@zeilar/hooks";
+import { useGlobalEvent } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

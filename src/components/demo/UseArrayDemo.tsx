@@ -1,4 +1,4 @@
-import { useArray } from "@zeilar/hooks";
+import { useArray } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import Button from "@mui/material/Button";

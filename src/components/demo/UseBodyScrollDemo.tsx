@@ -1,6 +1,6 @@
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
-import { useBodyScroll } from "@zeilar/hooks";
+import { useBodyScroll } from "use-ful-hooks-ts";
 import React from "react";
 import { withBrowserOnly } from "../withBrowserOnly";
 import { withThemeProvider } from "../withThemeProvider";

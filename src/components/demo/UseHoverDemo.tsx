@@ -1,4 +1,4 @@
-import { useHover } from "@zeilar/hooks";
+import { useHover } from "use-ful-hooks-ts";
 import React, { useState } from "react";
 import { withThemeProvider } from "../withThemeProvider";
 

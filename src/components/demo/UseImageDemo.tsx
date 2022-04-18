@@ -1,4 +1,4 @@
-import { useImage } from "@zeilar/hooks";
+import { useImage } from "use-ful-hooks-ts";
 import React from "react";
 import { withThemeProvider } from "../withThemeProvider";
 import useBaseUrl from "@docusaurus/useBaseUrl";
