@@ -14,7 +14,7 @@ function UseBodyScrollDemo() {
 		<pre>
 			<p>Has scroll: {String(hasScroll)}</p>
 			<p>Body overflow: {getComputedStyle(document.body).overflowY}</p>
-			<ButtonGroup sx={{ mt: 1 }}>
+			<ButtonGroup>
 				<Button onClick={() => setHasScroll(true)}>Enable</Button>
 				<Button onClick={() => setHasScroll(false)}>Disable</Button>
 			</ButtonGroup>
