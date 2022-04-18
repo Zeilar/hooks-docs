@@ -9,9 +9,9 @@ function UseBodyScrollDemo() {
 	const [hasScroll, setHasScroll] = useBodyScroll();
 	return (
 		<pre>
-			Has scroll: {hasScroll}
-			Body overflow: {getComputedStyle(document.body).overflowY}
-			<ButtonGroup>
+			<p>Has scroll: {hasScroll}</p>
+			<p>Body overflow: {getComputedStyle(document.body).overflowY}</p>
+			<ButtonGroup sx={{ mt: 1 }}>
 				<Button onClick={() => setHasScroll(true)}>Enable</Button>
 				<Button onClick={() => setHasScroll(false)}>Disable</Button>
 			</ButtonGroup>
